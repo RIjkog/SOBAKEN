@@ -1,0 +1,147 @@
+.about {
+	padding: $section-padding;
+
+	&__container {
+		display: flex;
+
+		@include lg {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__left-side {
+		display: flex;
+		flex: 0 0 calc(50% - 15px);
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		margin-right: $element-margin;
+
+		@include lg {
+			margin-right: 0;
+		}
+	}
+
+	&__right-side {
+		flex: 1 1 100%;
+	}
+
+	&__video {
+		margin-bottom: 32px;
+	}
+
+	&__facts {
+		@include flex-spaceb;
+
+		flex-wrap: wrap;
+		width: 100%;
+
+		@include sm {
+			@include flex-center;
+		}
+	}
+
+	&__text {
+		margin-bottom: 50px;
+
+		@include sm {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__title {
+		@include font-h2;
+
+		margin: 0;
+		margin-bottom: 16px;
+		width: 100%;
+
+		@include lg {
+			display: none;
+		}
+
+		&_mobile {
+			display: none;
+
+			@include lg {
+				display: block;
+			}
+		}
+	}
+
+	&__paragraph {
+		margin: 0;
+
+		&:not(:last-child) {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__buttons {
+		display: flex;
+
+		> :not(:last-child) {
+			margin-right: 12px;
+
+			@include sm {
+				margin: 0;
+				margin-bottom: 12px;
+			}
+		}
+
+		@include lg {
+			justify-content: center;
+		}
+
+		@include sm {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__image {
+		flex: 0 0 38%;
+		margin-right: $element-margin;
+
+		@include lg {
+			order: 2;
+			margin-right: 0;
+			margin-top: 24px;
+		}
+	}
+}
+
+.facts-list {
+	@include list-reset;
+
+	&__item {
+		text-align: center;
+
+		&:not(:last-child) {
+			margin-right: 20px;
+		}
+
+		@include sm {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__value {
+		@include font-price;
+
+		margin-bottom: 8px;
+
+		@include md {
+			@include font-price-S;
+		}
+	}
+
+	&__description {
+		@include font-body;
+
+		@include md {
+			@include font-body-2;
+		}
+	}
+}

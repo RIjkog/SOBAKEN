@@ -1,0 +1,185 @@
+.header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	box-shadow: 0 4px 25px rgba(217, 217, 217, 0.25);
+	background-color: $color-white;
+
+	&__container {
+		@include flex-spaceb;
+
+		justify-content: flex-end;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		background-color: inherit;
+	}
+
+	&__nav {
+		margin-right: 32px;
+		color: $color-text-secondary;
+
+		@include lg {
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: 1000;
+			display: block;
+			overflow-y: auto;
+			margin-top: 75px;
+			padding: 30px;
+			width: 100%;
+			height: 100%;
+			background-color: $color-white;
+			transform: translateX(-150%);
+			transition: transform 0.3s;
+		}
+
+		&_active {
+			transform: none;
+		}
+	}
+
+	&__social {
+		color: $color-grey-social;
+		opacity: 0.5;
+	}
+
+	&__shop-nav {
+		padding-left: 30px;
+	}
+
+	&__search-form {
+		margin-left: 8px;
+		border-radius: 71px;
+
+		&_mobile {
+			display: none;
+		}
+
+		@include md {
+			display: none;
+
+			&_mobile {
+				display: block;
+				margin: 0;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}
+
+.social {
+	@include list-reset;
+	@include flex-center;
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+	}
+
+	&__link {
+		display: block;
+		width: 24px;
+		height: 24px;
+		color: currentColor;
+
+		svg {
+			display: block;
+			width: 100%;
+			height: 100%;
+			fill: currentColor;
+			object-fit: cover;
+			transition: 0.9s;
+
+			&:hover {
+				fill: $color-text-secondary;
+			}
+		}
+	}
+}
+
+.shop-nav {
+	@include flex-center;
+
+	&__item {
+		border: 1px solid $color-grey-light;
+		border-radius: 50%;
+
+		&:not(:last-child) {
+			margin-right: 8px;
+		}
+	}
+
+	&__link {
+		@include flex-center;
+
+		width: 45px;
+		height: 45px;
+
+		&_cart {
+			color: $color-secondary;
+
+			&:hover {
+				color: $color-primary;
+			}
+		}
+
+		&_wishlist {
+			color: $color-grey;
+
+			&:hover {
+				color: $color-grey-social;
+			}
+		}
+
+		svg {
+			display: block;
+			width: 22px;
+			height: 22px;
+			fill: currentColor;
+			object-fit: cover;
+			transition: 0.9s;
+		}
+	}
+}
+
+.burger {
+	--burger-width: 15.5px;
+	--burger-height: 13.5px;
+	--burger-line-height: 1.5px;
+
+	@include burger;
+
+	display: none;
+	margin-left: 30px;
+	border-radius: 2px;
+	color: $color-text-secondary;
+
+	&::before,
+	&::after {
+		left: auto;
+		right: 0;
+	}
+
+	&::before {
+		width: 50%;
+	}
+
+	&::after {
+		width: 75%;
+	}
+
+	@include lg {
+		display: block;
+
+		&_active {
+			&::before,
+			&::after {
+				width: 100%;
+			}
+		}
+	}
+}

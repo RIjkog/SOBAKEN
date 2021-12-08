@@ -1,0 +1,108 @@
+@import "../vars";
+
+@mixin font($size-min: 16px, $size-max, $height-min: 120%, $height-max) {
+	font-size: responsive $size-min $size-max;
+	line-height: responsive $height-min $height-max;
+}
+
+@mixin font-h1 {
+	@include font(32px, 52px, 45px, 64px);
+
+	font-family: $font-secondary;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+@mixin font-h2 {
+	@include font(22px, 32px, 31px, 45px);
+
+	font-family: $font-secondary;
+	font-weight: 600;
+	letter-spacing: -0.04em;
+}
+
+@mixin font-h3 {
+	font-family: $font-primary;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: -0.04em;
+}
+
+@mixin font-title-XL {
+	font-family: $font-secondary;
+	font-weight: 600;
+	font-size: 28px;
+	line-height: 35px;
+	letter-spacing: -0.04em;
+}
+
+@mixin font-title-L {
+	font-family: $font-secondary;
+	font-weight: 600;
+	font-size: 24px;
+	line-height: 32px;
+	letter-spacing: -0.04em;
+}
+
+@mixin font-title-M {
+	font-family: $font-secondary;
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 28px;
+	letter-spacing: -0.04em;
+}
+
+@mixin font-title-S {
+	font-family: $font-secondary;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 32px;
+	letter-spacing: -0.04em;
+}
+
+@mixin font-title-XS {
+	font-family: $font-secondary;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: -0.04em;
+}
+
+@mixin font-price {
+	font-family: $font-primary;
+	font-weight: 700;
+	font-size: 32px;
+	letter-spacing: -0.06em;
+}
+
+@mixin font-price-S {
+	font-family: $font-primary;
+	font-weight: 700;
+	font-size: 24px;
+	letter-spacing: -0.06em;
+}
+
+@mixin font-button {
+	font-family: $font-secondary;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	letter-spacing: -0.04em;
+}
+
+@mixin font-body {
+	font-family: $font-primary;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 28px;
+	letter-spacing: normal;
+}
+
+@mixin font-body-2 {
+	font-family: $font-primary;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 19px;
+	letter-spacing: normal;
+}

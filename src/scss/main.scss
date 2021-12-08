@@ -1,0 +1,50 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// блоки
+@import "./components/search-form";
+@import "./components/nav";
+@import "./components/button";
+@import "./components/circle-img";
+@import "./components/card-benefits";
+@import "./components/card-product";
+@import "./components/video";
+@import "./components/news";
+@import "./components/slider";
+@import "./components/accordion";
+@import "./components/review";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/main-block";
+@import "./components/catalog";
+@import "./components/about-section";
+@import "./components/news-section";
+@import "./components/faq-section";
+@import "./components/reviews-section";
+@import "./components/footer";
+
+.ellipse3 {
+	z-index: -1;
+	width: 421px;
+	height: 689px;
+	background: rgba(177, 184, 239, 0.22);
+	filter: blur(198px);
+}
+
+.ellipse4 {
+	width: 262.77px;
+	height: 395px;
+	background: #f4ffc8;
+	filter: blur(198px);
+}
+
+.ellipse1 {
+	width: 344px;
+	height: 344px;
+	background: rgba(173, 255, 91, 0.46);
+	filter: blur(198px);
+}

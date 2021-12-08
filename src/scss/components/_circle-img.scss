@@ -1,0 +1,20 @@
+.circle-img {
+	display: inline-flex;
+	border-radius: 50%;
+	width: 100%;
+
+	img {
+		display: inline-block;
+		border-radius: 0 0 100vmax 100vmax;
+		max-width: 100%;
+		object-fit: cover;
+	}
+
+	&_primary {
+		background: $color-brand;
+	}
+
+	&_secondary {
+		background: linear-gradient(90deg, #efefbb 0%, #d4d3dd 100%);
+	}
+}

@@ -1,0 +1,49 @@
+.nav {
+	&__list {
+		@include list-reset;
+		@include flex-center;
+
+		@include lg {
+			display: block;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 38px;
+
+			@include lg {
+				margin-right: 0;
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	&__link {
+		@include font-body;
+
+		color: inherit;
+
+		&_active {
+			// list-style: disc;
+			text-shadow: 0.2px 0 0, -0.2px 0 0;
+			color: $color-text-primary;
+
+			/*	&::before {
+				content: "";
+				display: list-item;
+				width: 0;
+				height: 0;
+				color: $color-primary;
+			} */
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			// font-weight: 500;
+			text-shadow: 0.2px 0 0, -0.2px 0 0;
+			color: $color-text-primary;
+		}
+	}
+}

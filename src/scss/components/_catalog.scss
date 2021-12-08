@@ -1,0 +1,51 @@
+.catalog {
+	padding: $section-padding;
+
+	&__header {
+		@include flex-spaceb;
+
+		margin-bottom: 40px;
+
+		@include sm {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__title {
+		@include font-h2;
+
+		display: inline-flex;
+		align-items: center;
+		margin: 0;
+		margin-right: 20px;
+
+		svg {
+			flex-shrink: 0;
+			margin-right: 16px;
+			border-radius: 12px;
+			padding: 12px;
+			width: 48px;
+			height: 48px;
+		}
+
+		&_primary {
+			svg {
+				fill: $color-primary;
+				background-color: $color-primary-light;
+			}
+		}
+
+		&_secondary {
+			svg {
+				fill: $color-secondary;
+				background-color: $color-secondary-light;
+			}
+		}
+
+		@include sm {
+			margin: 0;
+			margin-bottom: 20px;
+		}
+	}
+}

@@ -1,0 +1,96 @@
+.button {
+	@include btn-reset;
+	@include flex-center;
+	@include font-button;
+
+	display: inline-flex;
+	outline: none;
+	border-radius: 12px;
+	padding: 16px 26px;
+	white-space: nowrap;
+	color: $color-white;
+	transition: all 0.3s;
+
+	svg {
+		margin-right: 16px;
+		width: 24px;
+		height: 24px;
+		fill: currentColor;
+	}
+
+	&_primary {
+		box-shadow: $shadow-s-yellow;
+		background-color: $color-primary;
+
+		&:hover,
+		&:focus,
+		&:active {
+			box-shadow: $shadow-m-yellow;
+			background: $color-hover-yellow;
+		}
+
+		&:active {
+			box-shadow: none;
+		}
+	}
+
+	&_secondary {
+		box-shadow: $shadow-s-green;
+		background-color: $color-secondary;
+
+		&:hover,
+		&:focus,
+		&:active {
+			box-shadow: $shadow-m-green;
+			background: $color-hover-green;
+		}
+
+		&:active {
+			box-shadow: none;
+		}
+	}
+
+	&_secondary-light {
+		border-radius: 74px;
+		padding: 18px 34px;
+		color: $color-secondary;
+		background: $color-secondary-light;
+
+		&:hover,
+		&:focus {
+			color: $color-white;
+			background: $color-secondary;
+		}
+
+		&:active {
+			color: $color-white;
+			background: $color-hover-green;
+		}
+	}
+
+	&_light {
+		border: 1px solid $color-grey-light;
+		color: $color-secondary;
+		background: $color-white;
+
+		&:hover,
+		&:focus {
+			border: 1px solid transparent;
+			color: $color-secondary;
+			background-color: $color-secondary-light;
+		}
+
+		&:active {
+			border: 1px solid transparent;
+			color: $color-white;
+			background-color: $color-secondary;
+		}
+	}
+
+	&:disabled {
+		border: transparent;
+		box-shadow: none;
+		color: $color-disable-secondary;
+		background-color: $color-disable-primary;
+	}
+}

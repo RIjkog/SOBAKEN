@@ -1,0 +1,160 @@
+.news {
+	position: relative;
+	display: flex;
+	align-items: flex-end;
+	overflow: hidden;
+	width: 100%;
+	min-height: 467px;
+
+	.button::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+
+	&__background {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+		border-radius: 12px;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+		@include md {
+			position: static;
+			height: 350px;
+		}
+
+		@include sm {
+			height: 250px;
+		}
+	}
+
+	&__text {
+		display: flex;
+		flex-direction: column;
+		margin: 15px;
+		border-radius: 12px;
+		padding: 20px 30px;
+		width: 100%;
+		box-shadow: 0 4px 15px rgba(174, 174, 174, 0.25);
+		color: $color-white;
+		background: $color-blured-bg;
+
+		// backdrop-filter: blur(20px);
+
+		> .button {
+			display: none;
+		}
+
+		@include md {
+			flex-flow: row-reverse wrap;
+			align-items: center;
+			justify-content: space-between;
+			margin: 0;
+			margin-top: 10px;
+			padding: 20px 15px;
+			color: $color-text-primary;
+			background: $color-white;
+
+			.button {
+				display: block;
+			}
+		}
+	}
+
+	&__date {
+		@include font-button;
+
+		@include md {
+			color: $color-grey;
+		}
+
+		@include sm {
+			@include font-body-2;
+		}
+	}
+
+	&__title {
+		@include font-title-L;
+
+		margin: 0;
+		margin-bottom: 14px;
+
+		@include md {
+			margin-top: 14px;
+		}
+
+		@include sm {
+			@include font-title-M;
+		}
+	}
+
+	&__bottom {
+		@include flex-spaceb;
+
+		@include md {
+			order: -1;
+
+			.button {
+				display: none;
+			}
+		}
+	}
+
+	&__author {
+		display: inline-flex;
+		align-items: center;
+		justify-content: flex-start;
+
+		@include md {
+			color: $color-grey;
+		}
+
+		@include sm {
+			@include font-body-2;
+		}
+	}
+
+	&__author-image {
+		display: block;
+		flex-shrink: 0;
+		overflow: hidden;
+		margin-right: 10px;
+		border-radius: 50%;
+		width: 32px;
+		height: 32px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		@include sm {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	@include md {
+		flex-direction: column;
+		border: 1px solid $color-grey-light;
+		border-radius: 12px;
+	}
+}
+
+.swiper-news {
+	&__pagination {
+		@include sm {
+			display: none;
+		}
+	}
+}
